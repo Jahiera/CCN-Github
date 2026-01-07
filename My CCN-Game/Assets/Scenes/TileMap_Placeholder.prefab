@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8932761714287048728}
   - component: {fileID: 647616113393683157}
   m_Layer: 0
-  m_Name: PlaceHolder
+  m_Name: TileMap_Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
