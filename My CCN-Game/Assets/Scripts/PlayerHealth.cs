@@ -1,8 +1,9 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int maxHealth = 3;
+    public int maxHealth = 4;
     public int currentHealth;
 
     private void Start()
@@ -24,9 +25,12 @@ public class PlayerHealth : MonoBehaviour
     void Die()
     {
         Debug.Log("Player died");
-
-        // Optional: disable player
-        gameObject.SetActive(false);
+        Invoke(nameof(Restart), 1f); // 1 sec delay when dying 
+       SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+    void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
 
