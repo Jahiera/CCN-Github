@@ -21,12 +21,17 @@ public class PlayerHealth : MonoBehaviour
             Die();
         }
     }
+    
+    public void DieInstant()
+    {
+        currentHealth = 0;
+        Die();
+    }
 
     void Die()
     {
         Debug.Log("Player died");
-        Invoke(nameof(Restart), 1f); // 1 sec delay when dying 
-       SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Invoke(nameof(Restart), 0.5f); // 0.5 sec delay when dying 
     }
     void Restart()
     {
