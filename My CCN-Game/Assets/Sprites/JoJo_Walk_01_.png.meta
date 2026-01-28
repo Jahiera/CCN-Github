@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1c8196b25eb0f44eaac16fc7ab769251
+guid: 66f3945866a3a45348e87df87421f3b1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5009546046917666223
-    second: Jojo_Walk_06__0
+      213: -8060473080089611056
+    second: JoJo_Walk_01__0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 45
+  spritePixelsToUnits: 40
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Jojo_Walk_06__0
+      name: JoJo_Walk_01__0
       rect:
         serializedVersion: 2
-        x: 17
-        y: 2
-        width: 94
-        height: 122
+        x: 0
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fa56d74869b758540800000000000000
-      internalID: 5009546046917666223
+      spriteID: 0d4f8ab9072732090800000000000000
+      internalID: -8060473080089611056
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 2347f9e8ac70c436ab645723db4228f0
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Jojo_Walk_06__0: 5009546046917666223
+      JoJo_Walk_01__0: -8060473080089611056
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
