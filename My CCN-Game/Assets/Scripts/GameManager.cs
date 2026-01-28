@@ -48,6 +48,10 @@ public class GameManager : MonoBehaviour
         // Move log to inventory slot
         log.transform.SetParent(inventorySlot);
         log.transform.localPosition = Vector3.zero;
+        
+        // make camp appear
+        log.transform.localScale = Vector3.one * 0.5f; // adjust if too big/small
+        log.transform.rotation = Quaternion.identity;
 
         // Disable physics and collision
         Collider2D col = log.GetComponent<Collider2D>();
