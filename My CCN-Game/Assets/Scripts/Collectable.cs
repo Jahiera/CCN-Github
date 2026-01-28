@@ -2,6 +2,21 @@ using UnityEngine;
 
 public class Collectable : MonoBehaviour
 {
+    public AudioClip pickupSound;       // Drag sound here in Inspector
+    private AudioSource audioSource;    // The AudioSource component to play it
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+        
+        audioSource.playOnAwake = false; // make sure it doesn't play automatically
+        audioSource.loop = false; // one shot 
+        
+    }
 
     // ======================
     // WHEN PLAYER TOUCHES LOG
@@ -10,6 +25,14 @@ public class Collectable : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            // Play the pick-up sound
+            if (pickupSound != null)
+            {
+                // This plays the sound instantly, independent of the log's GameObject
+                AudioSource.PlayClipAtPoint(pickupSound, transform.position);
+            }
+            
+            // pickup log
             GameManager gm =
                 GameObject.FindFirstObjectByType<GameManager>();
 
