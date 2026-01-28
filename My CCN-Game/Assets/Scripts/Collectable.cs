@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Collectable : MonoBehaviour
 {
+
     // ======================
     // WHEN PLAYER TOUCHES LOG
     // ======================

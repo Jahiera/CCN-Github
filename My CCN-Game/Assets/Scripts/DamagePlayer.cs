@@ -11,13 +11,13 @@ public class DamagePlayer : MonoBehaviour
         {
             PlayerHealth health = collision.GetComponent<PlayerHealth>();
 
-            if (health != null)
+            if (instantDeath)
             {
-                if (instantDeath) // if in contact with water
-                {
-                    health.DieInstant(); //die immediately
-                }
-                health.TakeDamage(damage); // if NOT with water, take damage 
+                health.DieInstant();
+            }
+            else
+            {
+                health.TakeDamage(damage);
             }
         }
     }
