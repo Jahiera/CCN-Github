@@ -4,6 +4,12 @@ using UnityEngine.InputSystem;
 public class Campfire : MonoBehaviour
 {
     private bool playerInRange = false;
+    private Animator animator;
+
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     // ======================
     // PLAYER ENTERS CAMPFIRE AREA
@@ -40,7 +46,24 @@ public class Campfire : MonoBehaviour
             if (gm != null && gm.hasLog)
             {
                 gm.PlaceLog();
+                
+                UpdateCampfireAnimation(gm.CollectedCount);
             }
         }
     }
+    
+    void UpdateCampfireAnimation(int logsPlaced)
+    {
+        if (animator == null) return;
+
+        if (logsPlaced >= 1)
+        {
+            animator.SetBool("IsLit", true); // turns on Stage4
+        }
+        else
+        {
+            animator.SetBool("IsLit", false); // keeps Stage1
+        }
+    }
+
 }

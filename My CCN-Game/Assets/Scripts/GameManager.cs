@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     // ======================
     private int totalCollectibles;
     private int collectedCount = 0;
+    public int CollectedCount => collectedCount;
 
     public TMP_Text collectibleText;   // UI counter text
     public GameObject logIcon; // UI icon for inventory
