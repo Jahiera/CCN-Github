@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     private int collectedCount = 0;
 
     public TMP_Text collectibleText;   // UI counter text
+    public GameObject logIcon; // UI icon for inventory
+
 
     // ======================
     // INVENTORY SYSTEM
@@ -44,10 +46,15 @@ public class GameManager : MonoBehaviour
 
         hasLog = true;
         heldLog = log;
+        
+        // Show UI log icon
+        if (logIcon != null)
+        {
+            logIcon.SetActive(true);
+        }
 
-        // Move log to inventory slot
-        log.transform.SetParent(inventorySlot);
-        log.transform.localPosition = Vector3.zero;
+        // Disable world log
+        log.SetActive(false);
         
         // make camp appear
         log.transform.localScale = Vector3.one * 0.5f; // adjust if too big/small
@@ -69,9 +76,15 @@ public class GameManager : MonoBehaviour
         if (!hasLog || heldLog == null) return;
 
         // Destroy the log AFTER placing
-        Destroy(heldLog);
+       
         heldLog = null;
         hasLog = false;
+        
+        // Hide UI icon
+        if (logIcon != null)
+        {
+            logIcon.SetActive(false);
+        }
 
         // Increase count ONLY here
         collectedCount++;
