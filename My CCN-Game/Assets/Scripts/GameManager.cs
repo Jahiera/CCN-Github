@@ -1,48 +1,87 @@
 using UnityEngine;
-using UnityEngine.SceneManagement; // to load other scenes
-using TMPro; // for the text UI
-
-
+using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    // public int totalCollectibles = 5;   // how many collectibles in the level
+    // ======================
+    // COLLECTIBLE COUNTING
+    // ======================
     private int totalCollectibles;
     private int collectedCount = 0;
-    public TMP_Text collectibleText;  // UI Text
+
+    public TMP_Text collectibleText;   // UI counter text
+
+    // ======================
+    // INVENTORY SYSTEM
+    // ======================
+    public bool hasLog = false;          // TRUE if player is holding a log
+    public GameObject heldLog;           // The actual log GameObject
+    public Transform inventorySlot;      // Top-left UI position
 
     void Start()
     {
-        // Automatically count all collectibles in the scene
-        totalCollectibles = GameObject.FindObjectsByType<Collectable>(FindObjectsSortMode.None).Length;
+        // Count collectibles automatically
+        totalCollectibles = GameObject
+            .FindObjectsByType<Collectable>(FindObjectsSortMode.None)
+            .Length;
+
         collectedCount = 0;
 
-        // Initialize UI
+        // Initialize UI text
         if (collectibleText != null)
         {
-            collectibleText.text = "Collected 0/" + totalCollectibles;
+            collectibleText.text = "Boost Fire 0/" + totalCollectibles;
         }
-
-        Debug.Log("Total Collectibles in level: " + totalCollectibles);
     }
-    
-    // Call this when a collectable is collected
-    public void CollectItem()
+
+    // ======================
+    // CALLED WHEN PLAYER PICKS UP A LOG
+    // ======================
+    public void CollectItem(GameObject log)
     {
+        if (hasLog) return; // player can only hold ONE log
+
+        hasLog = true;
+        heldLog = log;
+
+        // Move log to inventory slot
+        log.transform.SetParent(inventorySlot);
+        log.transform.localPosition = Vector3.zero;
+
+        // Disable physics and collision
+        Collider2D col = log.GetComponent<Collider2D>();
+        if (col) col.enabled = false;
+
+        Rigidbody2D rb = log.GetComponent<Rigidbody2D>();
+        if (rb) rb.simulated = false;
+    }
+
+    // ======================
+    // CALLED WHEN PLAYER PLACES LOG IN CAMPFIRE
+    // ======================
+    public void PlaceLog()
+    {
+        if (!hasLog || heldLog == null) return;
+
+        // Destroy the log AFTER placing
+        Destroy(heldLog);
+        heldLog = null;
+        hasLog = false;
+
+        // Increase count ONLY here
         collectedCount++;
-        
+
         if (collectibleText != null)
         {
-            collectibleText.text = "Collected " + collectedCount + "/" + totalCollectibles;
+            collectibleText.text =
+                "Collected " + collectedCount + "/" + totalCollectibles;
         }
 
-        Debug.Log("Collected: " + collectedCount);
-
+        // Load next scene when all placed
         if (collectedCount >= totalCollectibles)
         {
-            // All collected! Go to ComingSoon scene
             SceneManager.LoadScene("ComingSoon");
         }
     }
 }
-
