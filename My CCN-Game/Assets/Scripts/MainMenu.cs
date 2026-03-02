@@ -14,6 +14,12 @@ public class MainMenu : MonoBehaviour
             notes[i].SetActive(false);
         }
     }
+    // Quit button hooked to lead players to title/start screen 
+    public void GoToStartScreen()
+    {
+        CloseAllNotes();
+        SceneManager.LoadScene("TitleScreen");
+    }
 
     // Called by clicking a file icon
     public void OpenNote(int noteIndex)
