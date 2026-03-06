@@ -55,15 +55,8 @@ public class Campfire : MonoBehaviour
     void UpdateCampfireAnimation(int logsPlaced)
     {
         if (animator == null) return;
-
-        if (logsPlaced >= 1)
-        {
-            animator.SetBool("IsLit", true); // turns on Stage4
-        }
-        else
-        {
-            animator.SetBool("IsLit", false); // keeps Stage1
-        }
+        animator.SetInteger("logCount", logsPlaced);
+        
     }
 
 }
