@@ -8,12 +8,6 @@ TextureImporter:
   - first:
       213: -8017626892204662459
     second: Campfire0_3_1
-  - first:
-      213: -2711926568330101488
-    second: Campfire0_3_2
-  - first:
-      213: -5153942982583293079
-    second: Campfire0_3_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -55,7 +49,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -125,10 +119,10 @@ TextureImporter:
       name: Campfire0_3_0
       rect:
         serializedVersion: 2
-        x: 104
-        y: 104
-        width: 48
-        height: 114
+        x: 14
+        y: 16
+        width: 228
+        height: 90
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,10 +141,10 @@ TextureImporter:
       name: Campfire0_3_1
       rect:
         serializedVersion: 2
-        x: 130
-        y: 206
-        width: 22
-        height: 22
+        x: 110
+        y: 104
+        width: 36
+        height: 114
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,55 +159,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Campfire0_3_2
-      rect:
-        serializedVersion: 2
-        x: 152
-        y: 138
-        width: 14
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 01d7dbd872d4d5ad0800000000000000
-      internalID: -2711926568330101488
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Campfire0_3_3
-      rect:
-        serializedVersion: 2
-        x: 14
-        y: 16
-        width: 228
-        height: 89
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 96b61820a248978b0800000000000000
-      internalID: -5153942982583293079
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -225,8 +175,6 @@ TextureImporter:
     nameFileIdTable:
       Campfire0_3_0: -3475102384270144576
       Campfire0_3_1: -8017626892204662459
-      Campfire0_3_2: -2711926568330101488
-      Campfire0_3_3: -5153942982583293079
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
