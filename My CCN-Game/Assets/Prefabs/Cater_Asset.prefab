@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2671640528642938957}
   - component: {fileID: 3644391270604875886}
   - component: {fileID: 2885844417019951131}
+  - component: {fileID: -78251418062253515}
   m_Layer: 0
   m_Name: Cater_Asset
   m_TagString: Untagged
@@ -153,3 +154,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3, y: 0.91}
   m_EdgeRadius: 0
+--- !u!114 &-78251418062253515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838006493865531801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc7bd7cdd25ab84fa152b215052f479, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyPatrol
+  patrolPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  targetPoint: 0
+  speed: 4

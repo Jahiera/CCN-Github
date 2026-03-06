@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3200923169364874438}
   - component: {fileID: 5050620806858100739}
   - component: {fileID: -8697958481824205256}
+  - component: {fileID: 161055209713674352}
   m_Layer: 0
   m_Name: Spider_Asset
   m_TagString: Untagged
@@ -153,3 +154,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.56, y: 2.56}
   m_EdgeRadius: 0
+--- !u!114 &161055209713674352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4799059729727205442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc7bd7cdd25ab84fa152b215052f479, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyPatrol
+  patrolPoints: []
+  targetPoint: 0
+  speed: 0

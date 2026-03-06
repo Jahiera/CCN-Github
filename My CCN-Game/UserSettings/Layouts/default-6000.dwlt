@@ -1286,9 +1286,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -19.07082, y: 1.7436371, z: -0.1629508}
+    m_Target: {x: 4.3893356, y: -1.0979444, z: -0.20060454}
     speed: 2
-    m_Value: {x: -0.44943327, y: 0.20743966, z: 0}
+    m_Value: {x: -19.07082, y: 1.7436371, z: -0.1629508}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1338,9 +1338,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 15.752907
+    m_Target: 4.2339754
     speed: 2
-    m_Value: 10
+    m_Value: 15.752907
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1683,16 +1683,24 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 49572
-    - m_Data: 49944
-    - m_Data: 49946
-    - m_Data: 49948
-    - m_Data: 49950
-    - m_Data: 49952
-    - m_Data: 49954
-    - m_Data: 49956
-    - m_Data: 49958
-    - m_Data: 49960
+    - m_Data: 47752
+    - m_Data: 47768
+    - m_Data: 49988
+    - m_Data: 49990
+    - m_Data: 49992
+    - m_Data: 49994
+    - m_Data: 49996
+    - m_Data: 49998
+    - m_Data: 50000
+    - m_Data: 50002
+    - m_Data: 50004
+    - m_Data: 50006
+    - m_Data: 50008
+    - m_Data: 50010
+    - m_Data: 50012
+    - m_Data: 50014
+    - m_Data: 50016
+    - m_Data: 50018
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1726,16 +1734,24 @@ MonoBehaviour:
       m_Data: 50140
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 49572
-    - m_Data: 49944
-    - m_Data: 49946
-    - m_Data: 49948
-    - m_Data: 49950
-    - m_Data: 49952
-    - m_Data: 49954
-    - m_Data: 49956
-    - m_Data: 49958
-    - m_Data: 49960
+    - m_Data: 47752
+    - m_Data: 47768
+    - m_Data: 49988
+    - m_Data: 49990
+    - m_Data: 49992
+    - m_Data: 49994
+    - m_Data: 49996
+    - m_Data: 49998
+    - m_Data: 50000
+    - m_Data: 50002
+    - m_Data: 50004
+    - m_Data: 50006
+    - m_Data: 50008
+    - m_Data: 50010
+    - m_Data: 50012
+    - m_Data: 50014
+    - m_Data: 50016
+    - m_Data: 50018
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
