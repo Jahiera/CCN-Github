@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -16,12 +17,23 @@ public class PlayerMovement : MonoBehaviour
     private float horizontalInput;
     private bool isGrounded;
     private bool jumpPressed; 
+    private bool canJump = true; // to disable jump in level 2
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         rb.interpolation = RigidbodyInterpolation2D.Interpolate; // (smooths jitter)
+        
+        rb = GetComponent<Rigidbody2D>(); // check which scene is playing to disable level 2 jump
+        animator = GetComponent<Animator>();
+        rb.interpolation = RigidbodyInterpolation2D.Interpolate;
+
+        if (SceneManager.GetActiveScene().name == "Level2")
+        {
+            canJump = false;
+        }
+        
     }
 
 
@@ -74,7 +86,7 @@ public class PlayerMovement : MonoBehaviour
         rb.linearVelocity = new Vector2(horizontalInput * moveSpeed, rb.linearVelocity.y);
 
         // Jump
-        if (jumpPressed && isGrounded)
+        if (jumpPressed && isGrounded && canJump) // can jump in order to check for level 2 scene
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             jumpPressed = false;
