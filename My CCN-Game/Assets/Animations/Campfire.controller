@@ -8,9 +8,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: IsLit
-    m_EventTreshold: 0
+  - m_ConditionMode: 6
+    m_ConditionEvent: logCount
+    m_EventTreshold: 3
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 6310818356514756968}
   m_Solo: 0
@@ -60,9 +60,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: IsLit
-    m_EventTreshold: 0
+  - m_ConditionMode: 6
+    m_ConditionEvent: logCount
+    m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3502007744046269745}
   m_Solo: 0
@@ -151,7 +151,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: bb6757a16773849459670c1181575261, type: 2}
+  m_Motion: {fileID: 7400000, guid: 2f6559b51ed419547873bd25482c5354, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -202,9 +202,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: IsLit
-    m_EventTreshold: 0
+  - m_ConditionMode: 6
+    m_ConditionEvent: logCount
+    m_EventTreshold: 5
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -4245502441182565429}
   m_Solo: 0
@@ -228,8 +228,8 @@ AnimatorController:
   m_Name: Campfire
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: IsLit
-    m_Type: 4
+  - m_Name: logCount
+    m_Type: 3
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
@@ -268,7 +268,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: bb6757a16773849459670c1181575261, type: 2}
+  m_Motion: {fileID: 7400000, guid: 4105eb259bb45804c96386b8fc1c492d, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -282,9 +282,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: IsLit
-    m_EventTreshold: 0
+  - m_ConditionMode: 6
+    m_ConditionEvent: logCount
+    m_EventTreshold: 2
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -2209612870256401588}
   m_Solo: 0
@@ -307,9 +307,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: IsLit
-    m_EventTreshold: 0
+  - m_ConditionMode: 6
+    m_ConditionEvent: logCount
+    m_EventTreshold: 4
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1806345119471597722}
   m_Solo: 0
@@ -345,7 +345,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: bb6757a16773849459670c1181575261, type: 2}
+  m_Motion: {fileID: 7400000, guid: 22f4c2cddc7c5dd4dbe90d43d331cccb, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
