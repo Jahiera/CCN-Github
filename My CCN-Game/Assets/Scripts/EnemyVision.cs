@@ -66,9 +66,15 @@ public class EnemyVision : MonoBehaviour
 
         if (distanceToPlayer <= sightDistance)
         {
-            //Shoots Raycast to make sure there is nothing between them
-            Vector2 directionToPlayer = (playerTransform.position - transform.position).normalized;
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, directionToPlayer, sightDistance, obstacleLayer);
+            //Shoots Raycast to make sure there is nothing between them (added 1 value because it ws detecting the ground)
+            Vector2 enemyEyes = new Vector2(playerTransform.position.x, playerTransform.position.y +1f);
+            Vector2 playerChest = new Vector2(playerTransform.position.x, playerTransform.position.y +1f);
+            
+            //calculate distance between new points
+            Vector2 directionToPlayer = (playerChest - enemyEyes).normalized;
+            
+            //shoot raycast from eyes not the anchor point at the bottom
+            RaycastHit2D hit = Physics2D.Raycast(enemyEyes, directionToPlayer, sightDistance, obstacleLayer);
             
             //If nothing is blocking view
             if (hit.collider == null)
