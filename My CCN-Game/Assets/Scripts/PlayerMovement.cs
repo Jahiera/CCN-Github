@@ -18,12 +18,37 @@ public class PlayerMovement : MonoBehaviour
     private bool isGrounded;
     private bool jumpPressed; 
     private bool canJump = true; // to disable jump in level 2
+    
+    //Hiding spot
+    public bool isHiding {get; private set;}
+    private bool canHide = false;
+    private SpriteRenderer spriteRenderer;
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("HidingSpot"))
+        {
+            canHide = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("HidingSpot"))
+        {
+            canHide = false;
+
+            if (isHiding)
+            {
+                isHiding = false;
+                spriteRenderer.enabled = true;
+            }
+        }
+    }
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
-        rb.interpolation = RigidbodyInterpolation2D.Interpolate; // (smooths jitter)
+       spriteRenderer = GetComponent<SpriteRenderer>();
         
         rb = GetComponent<Rigidbody2D>(); // check which scene is playing to disable level 2 jump
         animator = GetComponent<Animator>();
@@ -35,10 +60,29 @@ public class PlayerMovement : MonoBehaviour
         }
         
     }
-
-
+    
     void Update()
     {
+
+        //Hiding input
+        if (Keyboard.current.eKey.wasPressedThisFrame && canHide)
+        {
+            isHiding = !isHiding; //Toggles between true and false
+
+            if (isHiding)
+            {
+                rb.linearVelocity = Vector2.zero; //Stops movement
+                spriteRenderer.enabled = false;
+            }
+            else
+            {
+                spriteRenderer.enabled = true;
+            }
+        }
+
+        if (isHiding) return;
+        
+        
         if (Keyboard.current == null) return;
 
         // Horizontal Input
