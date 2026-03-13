@@ -2,9 +2,21 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
+
 {
+    [Header("Audio")]
+    public AudioClip sceneLoop;
+private AudioSource audioSource;
+    
     [Header("Notes (Parent Objects)")]
     public GameObject[] notes;
+void Awake()
+{
+    audioSource = GetComponent<AudioSource>();
+    audioSource.clip = sceneLoop;
+    audioSource.loop = true;
+    audioSource.Play();
+}
 
     void Start()
     {
