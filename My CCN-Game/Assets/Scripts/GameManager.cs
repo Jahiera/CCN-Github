@@ -96,10 +96,13 @@ public class GameManager : MonoBehaviour
                 "Collected " + collectedCount + "/" + totalCollectibles;
         }
 
-        // Load next scene when all placed
+        // Load next scene when all logs placed
         if (collectedCount >= totalCollectibles)
         {
-            SceneManager.LoadScene("ComingSoon");
+            PlayerPrefs.SetInt("Level1Completed", 1);
+            PlayerPrefs.Save(); // game registers when level 1 is completed in order to unlock ticket 2 
+            
+            SceneManager.LoadScene("MainMenu"); // goes back to main menu when level 1 completed
         }
     }
 }

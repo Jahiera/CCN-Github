@@ -1,9 +1,14 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 
 {
+    
+    [Header("Ticket 2")]
+    public Button ticket2Button;
+    
     [Header("Audio")]
     public AudioClip sceneLoop;
 private AudioSource audioSource;
@@ -25,7 +30,13 @@ void Awake()
         {
             notes[i].SetActive(false);
         }
+        
+        // Unlock Ticket 2 if Level 1 is done
+        bool level1Completed = PlayerPrefs.GetInt("Level1Completed", 0) == 1;
+        ticket2Button.interactable = level1Completed;
+        
     }
+    
     // Quit button hooked to lead players to title/start screen 
     public void GoToStartScreen()
     {
