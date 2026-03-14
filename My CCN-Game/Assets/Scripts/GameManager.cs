@@ -24,6 +24,16 @@ public class GameManager : MonoBehaviour
     private float currentAlpha = 1f;    // starts fully opaque
     private float targetAlpha = 1f;     
     private float fadeSpeed = 2f; // adjust this value for smoothness 
+    
+    // CampfireGlow
+    public SpriteRenderer campfireGlow;  // Drag the glow circle sprite here
+    private float currentGlowAlpha = 0f; // starts invisible
+    private float targetGlowAlpha = 0f;
+    private float glowFadeSpeed = 2f;
+    private float maxGlowAlpha = 0.5f;   // max brightness of the glow
+    private bool glowActive = false; // only true after first log
+    
+    
 
     void Start()
     {
@@ -47,6 +57,16 @@ public class GameManager : MonoBehaviour
             targetAlpha = 1f;
         }
         
+        // Make sure glow is invisible at start
+        if (campfireGlow != null)
+        {
+            Color glowColor = campfireGlow.color;
+            glowColor.a = 0f;
+            campfireGlow.color = glowColor;
+            currentGlowAlpha = 0f;
+            targetGlowAlpha = 0f;
+        }
+        
     }
     
     
@@ -59,6 +79,19 @@ public class GameManager : MonoBehaviour
             Color c = vignetteImage.color;
             c.a = currentAlpha;
             vignetteImage.color = c;
+        }
+        
+        // Smoothly fade/pulse glow
+        if (campfireGlow != null && glowActive)
+        {
+            // Smooth lerp towards target alpha
+            currentGlowAlpha = Mathf.Lerp(currentGlowAlpha, targetGlowAlpha, Time.deltaTime * glowFadeSpeed);
+
+            // Add a slow flicker/pulse
+            float flicker = Mathf.Sin(Time.time * 3f) * 0.03f; // slower frequency
+            Color glowColor = campfireGlow.color;
+            glowColor.a = Mathf.Clamp(currentGlowAlpha + flicker, 0f, maxGlowAlpha);
+            campfireGlow.color = glowColor;
         }
     }      
     
@@ -120,6 +153,18 @@ public class GameManager : MonoBehaviour
         {
             // Each log fades the vignette a bit
             targetAlpha = Mathf.Clamp01(1f - ((float)collectedCount / totalCollectibles));
+        }
+        
+        //Update campfire glow
+        // Update campfire glow
+        if (campfireGlow != null && collectedCount > 0)
+        {
+            glowActive = true; // start glow pulsing
+
+            // Starts faint, scales with logs
+            float minGlow = 0.005f; // faint start
+            float addedGlow = 0.25f * ((float)collectedCount / totalCollectibles); 
+            targetGlowAlpha = Mathf.Clamp(minGlow + addedGlow, 0f, maxGlowAlpha);
         }
 
         // Load next scene when all logs placed
