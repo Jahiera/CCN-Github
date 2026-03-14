@@ -1,12 +1,11 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    // ======================
     // COLLECTIBLE COUNTING
-    // ======================
     private int totalCollectibles;
     private int collectedCount = 0;
     public int CollectedCount => collectedCount;
@@ -14,21 +13,22 @@ public class GameManager : MonoBehaviour
     public TMP_Text collectibleText;   // UI counter text
     public GameObject logIcon; // UI icon for inventory
 
-
-    // ======================
+    
     // INVENTORY SYSTEM
-    // ======================
     public bool hasLog = false;          // TRUE if player is holding a log
     public GameObject heldLog;           // The actual log GameObject
     public Transform inventorySlot;      // Top-left UI position
+    
+    // Vignette
+    public Image vignetteImage;
+    private float currentAlpha = 1f;    // starts fully opaque
+    private float targetAlpha = 1f;     
+    private float fadeSpeed = 2f; // adjust this value for smoothness 
 
     void Start()
     {
         // Count collectibles automatically
-        totalCollectibles = GameObject
-            .FindObjectsByType<Collectable>(FindObjectsSortMode.None)
-            .Length;
-
+        totalCollectibles = GameObject.FindObjectsByType<Collectable>(FindObjectsSortMode.None).Length;
         collectedCount = 0;
 
         // Initialize UI text
@@ -36,11 +36,33 @@ public class GameManager : MonoBehaviour
         {
             collectibleText.text = "Boost Fire 0/" + totalCollectibles;
         }
+        
+        // Set vignette fully opaque at start
+        if (vignetteImage != null)
+        {
+            Color c = vignetteImage.color;
+            c.a = 1f;
+            vignetteImage.color = c;
+            currentAlpha = 1f;
+            targetAlpha = 1f;
+        }
+        
     }
-
-    // ======================
+    
+    
+    void Update()
+    {
+        if (vignetteImage != null)
+        {
+            // Smooth fade towards targetAlpha
+            currentAlpha = Mathf.Lerp(currentAlpha, targetAlpha, Time.deltaTime * fadeSpeed);
+            Color c = vignetteImage.color;
+            c.a = currentAlpha;
+            vignetteImage.color = c;
+        }
+    }      
+    
     // CALLED WHEN PLAYER PICKS UP A LOG
-    // ======================
     public void CollectItem(GameObject log)
     {
         if (hasLog) return; // player can only hold ONE log
@@ -68,10 +90,8 @@ public class GameManager : MonoBehaviour
         Rigidbody2D rb = log.GetComponent<Rigidbody2D>();
         if (rb) rb.simulated = false;
     }
-
-    // ======================
+    
     // CALLED WHEN PLAYER PLACES LOG IN CAMPFIRE
-    // ======================
     public void PlaceLog()
     {
         if (!hasLog || heldLog == null) return;
@@ -92,8 +112,14 @@ public class GameManager : MonoBehaviour
 
         if (collectibleText != null)
         {
-            collectibleText.text =
-                "Collected " + collectedCount + "/" + totalCollectibles;
+            collectibleText.text = "Collected " + collectedCount + "/" + totalCollectibles;
+        }
+        
+        // Update vignette target alpha
+        if (vignetteImage != null)
+        {
+            // Each log fades the vignette a bit
+            targetAlpha = Mathf.Clamp01(1f - ((float)collectedCount / totalCollectibles));
         }
 
         // Load next scene when all logs placed
