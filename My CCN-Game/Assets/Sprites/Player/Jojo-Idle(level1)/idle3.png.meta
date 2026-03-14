@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 66f3945866a3a45348e87df87421f3b1
+guid: 9296f4bbdf4ca4676b0ef282d0fde2b2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8060473080089611056
-    second: JoJo_Walk_01__0
+      213: 4616187647488888312
+    second: idle3_0
+  - first:
+      213: 8686318598480117520
+    second: idle3_1
+  - first:
+      213: 8221861445902159548
+    second: idle3_2
+  - first:
+      213: 5063575186141065673
+    second: idle3_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,27 +105,106 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: JoJo_Walk_01__0
+      name: idle3_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 28
         y: 0
-        width: 128
-        height: 128
+        width: 73
+        height: 127
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0d4f8ab9072732090800000000000000
-      internalID: -8060473080089611056
+      spriteID: 8fd0f11353eff0040800000000000000
+      internalID: 4616187647488888312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle3_1
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 76
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01fb6444eb00c8870800000000000000
+      internalID: 8686318598480117520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle3_2
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 93
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbe4a7b7c6be91270800000000000000
+      internalID: 8221861445902159548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle3_3
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 73
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c1bb67cdce654640800000000000000
+      internalID: 5063575186141065673
       vertices: []
       indices: 
       edges: []
@@ -125,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2347f9e8ac70c436ab645723db4228f0
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      JoJo_Walk_01__0: -8060473080089611056
+      idle3_0: 4616187647488888312
+      idle3_1: 8686318598480117520
+      idle3_2: 8221861445902159548
+      idle3_3: 5063575186141065673
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
