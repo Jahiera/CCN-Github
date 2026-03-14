@@ -23,6 +23,12 @@ public class PlayerMovement : MonoBehaviour
     public bool isHiding {get; private set;}
     private bool canHide = false;
     private SpriteRenderer spriteRenderer;
+    
+    //Gravity Setup 
+    [SerializeField] private float normalGravity = 2f;
+    [SerializeField] private float fallGravity = 3.5f;
+    [SerializeField] private float jumpBoost = 1.15f; // <- this is a multiplier, not a new force FYI 
+    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -58,6 +64,9 @@ public class PlayerMovement : MonoBehaviour
         {
             canJump = false;
         }
+        
+       //Default Gravity 
+       rb.gravityScale = normalGravity; 
         
     }
     
@@ -132,9 +141,20 @@ public class PlayerMovement : MonoBehaviour
         // Jump
         if (jumpPressed && isGrounded && canJump) // can jump in order to check for level 2 scene
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce * jumpBoost);
             jumpPressed = false;
         }
+        
+        //Adjust gravity dynamically 
+        if (rb.linearVelocity.y < 0)
+        {
+            rb.gravityScale = fallGravity;   // Falling faster
+        }
+        else
+        {
+            rb.gravityScale = normalGravity; // Rising / grounded
+        }
+        
     }
     
 }

@@ -5,6 +5,9 @@ public class Campfire : MonoBehaviour
 {
     private bool playerInRange = false;
     private Animator animator;
+    
+    [SerializeField] private AudioSource fireAudio;
+    private bool fireStarted = false;
 
     void Start()
     {
@@ -56,6 +59,13 @@ public class Campfire : MonoBehaviour
     {
         if (animator == null) return;
         animator.SetInteger("logCount", logsPlaced);
+        
+        // start fire sound after first log
+        if (!fireStarted && logsPlaced >0)
+        {
+            fireStarted = true;
+            fireAudio.Play(); 
+        }
         
     }
 
