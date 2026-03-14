@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float fallGravity = 3.5f;
     [SerializeField] private float jumpBoost = 1.15f; // <- this is a multiplier, not a new force FYI 
     
+    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

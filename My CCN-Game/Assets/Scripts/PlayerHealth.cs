@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Collections;  
 
 
 public class PlayerHealth : MonoBehaviour
@@ -10,11 +11,29 @@ public class PlayerHealth : MonoBehaviour
     public Sprite[] healthSprites;  // 5 battery sprites (empty → full)
     public int maxHealth = 5;
     public int currentHealth;
+    
+    //ouch sound setup
+    public AudioClip ouchSound;     
+    private AudioSource audioSource;  
+    
+    //player blinks when damage taken 
+    public SpriteRenderer playerSprite;   // drag your player sprite here
+    public float blinkDuration = 1f;      // total blinking time
+    public float blinkInterval = 0.1f;    // time between on/off blinks
 
     private void Start()
     {
         currentHealth = maxHealth;
         UpdateHealthUI();
+        
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+            audioSource.playOnAwake = false;
+            audioSource.loop = false;
+        }
+        
     }
 
     // Call this when the player takes damage
@@ -24,6 +43,19 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
 
         UpdateHealthUI();
+        
+        // Play ouch sound
+        if (audioSource != null && ouchSound != null)
+        {
+            audioSource.PlayOneShot(ouchSound);
+        }
+        
+        //blinking 
+        if (playerSprite != null)
+        {
+            StopAllCoroutines();          // stop any previous blinking
+            StartCoroutine(BlinkSprite());
+        }
 
         if (currentHealth <= 0)
         {
@@ -59,6 +91,24 @@ public class PlayerHealth : MonoBehaviour
         if (spriteIndex < 0) spriteIndex = 0;
 
         healthImage.sprite = healthSprites[spriteIndex];
+    }
+    
+    //player blinks when damage is taken 
+    private IEnumerator BlinkSprite()
+    {
+        float elapsed = 0f;
+
+        while (elapsed < blinkDuration)
+        {
+            if (playerSprite != null)
+                playerSprite.enabled = !playerSprite.enabled; // toggle sprite visibility
+
+            elapsed += blinkInterval;
+            yield return new WaitForSeconds(blinkInterval);
+        }
+
+        if (playerSprite != null)
+            playerSprite.enabled = true; // make sure sprite is visible at the end
     }
 
 }
