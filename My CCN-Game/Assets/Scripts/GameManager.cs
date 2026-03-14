@@ -34,6 +34,9 @@ public class GameManager : MonoBehaviour
     private bool glowActive = false; // only true after first log
     
     
+    // Sound for placing log
+    public AudioClip placeLogSound; 
+    private AudioSource audioSource;
 
     void Start()
     {
@@ -66,6 +69,11 @@ public class GameManager : MonoBehaviour
             currentGlowAlpha = 0f;
             targetGlowAlpha = 0f;
         }
+        
+        // Setup AudioSource for log placement
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.playOnAwake = false;
+        audioSource.loop = false;
         
     }
     
@@ -165,6 +173,12 @@ public class GameManager : MonoBehaviour
             float minGlow = 0.005f; // faint start
             float addedGlow = 0.25f * ((float)collectedCount / totalCollectibles); 
             targetGlowAlpha = Mathf.Clamp(minGlow + addedGlow, 0f, maxGlowAlpha);
+        }
+        
+        //Log Placed Sound
+        if (audioSource != null && placeLogSound != null)
+        {
+            audioSource.PlayOneShot(placeLogSound);
         }
 
         // Load next scene when all logs placed
