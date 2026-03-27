@@ -111,10 +111,7 @@ MonoBehaviour:
   sightDistance: 5
   obstacleLayer:
     serializedVersion: 2
-    m_Bits: 0
-  currentEmbarrassment: 0
-  maxEmbarrassment: 100
-  embarrassmentRate: 20
+    m_Bits: 64
   safeSprite: {fileID: 0}
   warningSprite: {fileID: 0}
   dangerSprite: {fileID: 0}

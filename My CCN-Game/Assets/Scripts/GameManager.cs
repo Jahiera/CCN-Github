@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
     // Sound for placing log
     public AudioClip placeLogSound; 
     private AudioSource audioSource;
-
+    
     void Start()
     {
         // Count collectibles automatically
@@ -101,6 +101,7 @@ public class GameManager : MonoBehaviour
             glowColor.a = Mathf.Clamp(currentGlowAlpha + flicker, 0f, maxGlowAlpha);
             campfireGlow.color = glowColor;
         }
+        
     }      
     
     // CALLED WHEN PLAYER PICKS UP A LOG
@@ -190,4 +191,6 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene("MainMenu"); // goes back to main menu when level 1 completed
         }
     }
+    
+
 }
