@@ -114,7 +114,7 @@ MonoBehaviour:
     m_Bits: 0
   currentEmbarrassment: 0
   maxEmbarrassment: 100
-  embarrassmentRate: 30
+  embarrassmentRate: 20
   safeSprite: {fileID: 0}
   warningSprite: {fileID: 0}
   dangerSprite: {fileID: 0}
