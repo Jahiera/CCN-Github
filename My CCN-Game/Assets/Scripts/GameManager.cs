@@ -153,7 +153,7 @@ public class GameManager : MonoBehaviour
 
         if (collectibleText != null)
         {
-            collectibleText.text = "Collected " + collectedCount + "/" + totalCollectibles;
+            collectibleText.text = "Fire Boosted " + collectedCount + "/" + totalCollectibles;
         }
         
         // Update vignette target alpha

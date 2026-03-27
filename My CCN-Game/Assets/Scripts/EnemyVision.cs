@@ -37,6 +37,7 @@ public class EnemyVision : MonoBehaviour
             isFacingCamera = false;
             if (enemySprite != null && safeSprite != null) enemySprite.sprite = safeSprite;
             
+            // random look duration
             yield return new WaitForSeconds(Random.Range(2f, 5f));
             
             //State 2: warning (about to turn)
