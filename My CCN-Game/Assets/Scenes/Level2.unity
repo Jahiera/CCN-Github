@@ -2307,8 +2307,8 @@ GameObject:
   - component: {fileID: 970683049}
   - component: {fileID: 970683048}
   - component: {fileID: 970683047}
-  - component: {fileID: 970683046}
   - component: {fileID: 970683044}
+  - component: {fileID: 970683052}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2338,31 +2338,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &970683046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 970683043}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1e8d5dfc2ec48641b85dad426611623, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
-  healthImage: {fileID: 0}
-  healthSprites:
-  - {fileID: 2236568804380985233, guid: d98428bac13f246a9b9de32ff8fdf839, type: 3}
-  - {fileID: 8224623208396257113, guid: d65fa9a4e39de44f8a10590a624af61a, type: 3}
-  - {fileID: -5088448762867395205, guid: 32cfdf014db694b00b13bcac6f4b8e44, type: 3}
-  - {fileID: -5208778830210800663, guid: 53179eee9c92a42979e185ad4328a656, type: 3}
-  - {fileID: -4940897345591206735, guid: c4edc76cb12a44717b6fb05033dec062, type: 3}
-  maxHealth: 5
-  currentHealth: 0
-  ouchSound: {fileID: 0}
-  playerSprite: {fileID: 0}
-  blinkDuration: 1
-  blinkInterval: 0.1
 --- !u!114 &970683047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2524,6 +2499,18 @@ Transform:
   - {fileID: 1153301984}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &970683052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970683043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79f13ef8238e24e448d50dd7c87b88b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HidingSpots
 --- !u!4 &992542327 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5725448502350081386, guid: 5d89d211b3f29374bb577289f25deab3, type: 3}

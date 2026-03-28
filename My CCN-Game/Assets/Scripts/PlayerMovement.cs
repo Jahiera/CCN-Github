@@ -19,10 +19,9 @@ public class PlayerMovement : MonoBehaviour
     private bool jumpPressed; 
     private bool canJump = true; // to disable jump in level 2
     
-    //Hiding spot
+    //Hiding (do not remove bc other systems rely on it)
     public bool isHiding {get; private set;}
-    private bool canHide = false;
-    private SpriteRenderer spriteRenderer;
+ 
     
     //Gravity Setup 
     [SerializeField] private float normalGravity = 2f;
@@ -31,31 +30,11 @@ public class PlayerMovement : MonoBehaviour
     
     
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("HidingSpot"))
-        {
-            canHide = true;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("HidingSpot"))
-        {
-            canHide = false;
-
-            if (isHiding)
-            {
-                isHiding = false;
-                spriteRenderer.enabled = true;
-            }
-        }
-    }
+    
 
     void Start()
     {
-       spriteRenderer = GetComponent<SpriteRenderer>();
+     
         
         rb = GetComponent<Rigidbody2D>(); // check which scene is playing to disable level 2 jump
         animator = GetComponent<Animator>();
@@ -74,21 +53,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
 
-        //Hiding input
-        if (Keyboard.current.eKey.wasPressedThisFrame && canHide)
-        {
-            isHiding = !isHiding; //Toggles between true and false
-
-            if (isHiding)
-            {
-                rb.linearVelocity = Vector2.zero; //Stops movement
-                spriteRenderer.enabled = false;
-            }
-            else
-            {
-                spriteRenderer.enabled = true;
-            }
-        }
+       
 
         if (isHiding) return;
         
@@ -156,6 +121,11 @@ public class PlayerMovement : MonoBehaviour
             rb.gravityScale = normalGravity; // Rising / grounded
         }
         
+    }
+    
+    public void SetHiding(bool value)
+    {
+        isHiding = value;
     }
     
 }
