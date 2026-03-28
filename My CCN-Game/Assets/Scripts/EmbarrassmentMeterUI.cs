@@ -13,11 +13,24 @@ public class EmbarrassmentMeterUI : MonoBehaviour
     public Transform playerTransform;
     public PlayerMovement playerScript;
 
+
+	public Image vignetteImage;
+
     void Start()
     {
         slider.minValue = 0f;
         slider.maxValue = maxEmbarrassment;
         slider.value = currentEmbarrassment;
+
+//start the vinette image at 0% opacity 
+if (vignetteImage != null)
+{
+    Color c = vignetteImage.color;
+    c.a = 0f;
+    vignetteImage.color = c;
+}
+
+
     }
 
     void Update()
@@ -56,5 +69,15 @@ public class EmbarrassmentMeterUI : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
+
+// Update vignette opacity based on embarrassment meter levels
+if (vignetteImage != null)
+{
+    float normalizedEmbarrassment = currentEmbarrassment / maxEmbarrassment;
+    Color c = vignetteImage.color;
+    c.a = normalizedEmbarrassment;
+    vignetteImage.color = c;
+}
+
     }
 }
