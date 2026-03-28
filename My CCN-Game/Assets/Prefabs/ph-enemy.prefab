@@ -104,14 +104,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e2d76a289b2deb409b926c0ac4dbd88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyVision
-  playerTransform: {fileID: 0}
-  playerScript: {fileID: 0}
-  enemySprite: {fileID: 0}
-  isFacingCamera: 0
-  sightDistance: 5
-  obstacleLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  safeSprite: {fileID: 0}
+  embarrassmentRadius: 11
+  enemySprite: {fileID: 1144556681072765254}
+  safeSprite: {fileID: 6066381881403984232, guid: 81064f188ec471249b9cecdf334dc339, type: 3}
   warningSprite: {fileID: 0}
-  dangerSprite: {fileID: 0}
+  dangerSprite: {fileID: -3283744690384129456, guid: b90ea209915050d4eb4ce3015822909e, type: 3}
