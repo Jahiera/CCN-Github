@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c44f11a8148aec74386d0c1d1a2a0bcf
+guid: 579740f3d888198489518407b3c1c039
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5025640965708895056
-    second: new tree_0
+      213: -4359632147453071672
+    second: Health_S5_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,65 +96,27 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: new tree_0
+      name: Health_S5_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1073
-        height: 1399
+        width: 162
+        height: 76
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
-      outline:
-      - - {x: -223.5, y: -429.5}
-        - {x: -288.5, y: -401.5}
-        - {x: -350.5, y: -379.5}
-        - {x: -402.5, y: -368.5}
-        - {x: -397.5, y: -387.5}
-        - {x: -371.5, y: -391.5}
-        - {x: -290.5, y: -417.5}
-        - {x: -188.5, y: -459.5}
-        - {x: -138.5, y: -486.5}
-        - {x: -75.5, y: -514.5}
-        - {x: -51.5, y: -483.5}
-        - {x: -133.5, y: -466.5}
-      - - {x: -536.5, y: -407.5}
-        - {x: -536.5, y: -495.5}
-        - {x: -415.5, y: -647.5}
-        - {x: -88.5, y: -699.5}
-        - {x: 131.5, y: -699.5}
-        - {x: 536.5, y: -502.5}
-        - {x: 536.5, y: -411.5}
-        - {x: 516.5, y: -274.5}
-        - {x: 339.5, y: 23.5}
-        - {x: 143.5, y: 288.5}
-        - {x: 63.5, y: 584.5}
-        - {x: -16.5, y: 691.5}
-        - {x: -318.5, y: 61.5}
+      outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 053dab1d4d9aeb540800000000000000
-      internalID: 5025640965708895056
+      spriteID: 8ceafa309a97f73c0800000000000000
+      internalID: -4359632147453071672
       vertices: []
       indices: 
       edges: []
@@ -163,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 50a931bea67be0d4585c48c923f212c3
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -173,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      new tree_0: 5025640965708895056
+      Health_S5_0: -4359632147453071672
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c44f11a8148aec74386d0c1d1a2a0bcf
+guid: d343a364c9c1a7b4f9c067fa1506ead0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5025640965708895056
-    second: new tree_0
+      213: -862786873547226496
+    second: Dark5 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,65 +96,38 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: new tree_0
+      name: Dark5 1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1073
-        height: 1399
+        x: 20
+        y: 24
+        width: 378
+        height: 174
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
-      outline:
-      - - {x: -223.5, y: -429.5}
-        - {x: -288.5, y: -401.5}
-        - {x: -350.5, y: -379.5}
-        - {x: -402.5, y: -368.5}
-        - {x: -397.5, y: -387.5}
-        - {x: -371.5, y: -391.5}
-        - {x: -290.5, y: -417.5}
-        - {x: -188.5, y: -459.5}
-        - {x: -138.5, y: -486.5}
-        - {x: -75.5, y: -514.5}
-        - {x: -51.5, y: -483.5}
-        - {x: -133.5, y: -466.5}
-      - - {x: -536.5, y: -407.5}
-        - {x: -536.5, y: -495.5}
-        - {x: -415.5, y: -647.5}
-        - {x: -88.5, y: -699.5}
-        - {x: 131.5, y: -699.5}
-        - {x: 536.5, y: -502.5}
-        - {x: 536.5, y: -411.5}
-        - {x: 516.5, y: -274.5}
-        - {x: 339.5, y: 23.5}
-        - {x: 143.5, y: 288.5}
-        - {x: 63.5, y: 584.5}
-        - {x: -16.5, y: 691.5}
-        - {x: -318.5, y: 61.5}
-      physicsShape: []
+      outline: []
+      physicsShape:
+      - - {x: 27, y: 10}
+        - {x: -54, y: 44}
+        - {x: -124, y: 72}
+        - {x: -186, y: 84}
+        - {x: -178, y: 65}
+        - {x: -124, y: 53}
+        - {x: -20, y: 14}
+        - {x: 97, y: -37}
+        - {x: 165, y: -43}
+        - {x: 170, y: -28}
+        - {x: 117, y: -23}
       tessellationDetail: 0
       bones: []
-      spriteID: 053dab1d4d9aeb540800000000000000
-      internalID: 5025640965708895056
+      spriteID: 0820955e8e3c604f0800000000000000
+      internalID: -862786873547226496
       vertices: []
       indices: 
       edges: []
@@ -163,7 +136,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 50a931bea67be0d4585c48c923f212c3
+    spriteID: 2930f95713ffd5e49bb9747521b89cde
     internalID: 0
     vertices: []
     indices: 
@@ -173,7 +146,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      new tree_0: 5025640965708895056
+      Dark5 1_0: -862786873547226496
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
