@@ -37,26 +37,42 @@ public class Collectable : MonoBehaviour
     // ======================
     // WHEN PLAYER TOUCHES LOG
     // ======================
+    // ======================
+// WHEN PLAYER TOUCHES LOG
+// ======================
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
+            // pickup log
+            GameManager gm =
+                GameObject.FindFirstObjectByType<GameManager>();
+
+            if (gm == null) return;
+
             // Play the pick-up sound
             if (pickupSound != null)
             {
                 // This plays the sound instantly, independent of the log's GameObject
                 AudioSource.PlayClipAtPoint(pickupSound, transform.position);
             }
-            
-            // pickup log
-            GameManager gm =
-                GameObject.FindFirstObjectByType<GameManager>();
 
-            if (gm != null)
+            if (gm.hasLog)
             {
-                // Tell GameManager to PICK UP this log
-                gm.CollectItem(gameObject);
+                // SHOW THOUGHT BUBBLE
+                PlayerThoughtBubble bubble =
+                    collision.GetComponent<PlayerThoughtBubble>();
+
+                if (bubble != null)
+                {
+                    bubble.ShowBubble();
+                }
+
+                return; // DO NOT PICK UP LOG
             }
+
+            // Tell GameManager to PICK UP this log
+            gm.CollectItem(gameObject);
         }
     }
 }
