@@ -21,20 +21,14 @@ public class PlayerMovement : MonoBehaviour
     
     //Hiding (do not remove bc other systems rely on it)
     public bool isHiding {get; private set;}
- 
     
     //Gravity Setup 
     [SerializeField] private float normalGravity = 2f;
     [SerializeField] private float fallGravity = 3.5f;
     [SerializeField] private float jumpBoost = 1.15f; // <- this is a multiplier, not a new force FYI 
-    
-    
-
-    
 
     void Start()
     {
-     
         
         rb = GetComponent<Rigidbody2D>(); // check which scene is playing to disable level 2 jump
         animator = GetComponent<Animator>();
