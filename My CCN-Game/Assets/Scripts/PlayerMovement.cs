@@ -26,6 +26,15 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float normalGravity = 2f;
     [SerializeField] private float fallGravity = 3.5f;
     [SerializeField] private float jumpBoost = 1.15f; // <- this is a multiplier, not a new force FYI 
+    
+    //LVL3 Climbing Setup
+    [SerializeField] private float climbSpeed = 4f;
+
+    private bool isOnLadder = false;
+    private bool isClimbing = false;
+
+    private float verticalInput;
+   
 
     void Start()
     {
@@ -41,6 +50,8 @@ public class PlayerMovement : MonoBehaviour
         
        //Default Gravity 
        rb.gravityScale = normalGravity; 
+       
+       
         
     }
     
@@ -58,6 +69,13 @@ public class PlayerMovement : MonoBehaviour
         horizontalInput = 0f;
         if (Keyboard.current.aKey.isPressed) horizontalInput = -1f; // go left 
         if (Keyboard.current.dKey.isPressed) horizontalInput = 1f; // go right 
+        
+        //vertical input
+
+        verticalInput = 0f;
+
+        if (Keyboard.current.wKey.isPressed) verticalInput = 1f;
+        if (Keyboard.current.sKey.isPressed) verticalInput = -1f;
         
 
         // Jump Input
@@ -86,12 +104,30 @@ public class PlayerMovement : MonoBehaviour
                 1
             );
         }
+        
+        //LVL3 Climbing Logic
 
+        if (isOnLadder && Mathf.Abs(verticalInput) > 0)
+        {
+            isClimbing = true;
+        }
+        else if (verticalInput == 0)
+        {
+            isClimbing = false;
+        }
 
     }
 
     void FixedUpdate()
     {
+        //LVL3 Climbing
+        if (isClimbing)
+        {
+            rb.gravityScale = 0f;
+            rb.linearVelocity = new Vector2(0f, verticalInput * climbSpeed);
+            return;
+        }
+        
         // Ground check
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
@@ -122,4 +158,23 @@ public class PlayerMovement : MonoBehaviour
         isHiding = value;
     }
     
+    //LVL3 Climbing voids
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Ladder"))
+        {
+            isOnLadder = true;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Ladder"))
+        {
+            isOnLadder = false;
+            isClimbing = false;
+            
+            rb.gravityScale = normalGravity;
+        }
+    }
 }
