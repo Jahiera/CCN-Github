@@ -120,6 +120,9 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        // Ground check
+             isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+             
         //LVL3 Climbing
         if (isClimbing)
         {
@@ -128,8 +131,7 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
         
-        // Ground check
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+        
 
         // Horizontal movement
         rb.linearVelocity = new Vector2(horizontalInput * moveSpeed, rb.linearVelocity.y);

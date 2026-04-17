@@ -43,6 +43,7 @@ public class PlayerThoughtBubble : MonoBehaviour
 
     public void ShowBubble()
     {
+        Debug.Log("Bubble triggered");
         if (thoughtBubble == null) return;
 
         if (bubbleCoroutine != null)
