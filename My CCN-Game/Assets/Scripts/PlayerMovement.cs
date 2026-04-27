@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
 
     //Ground Detection
     public Transform groundCheck;
-    public float groundCheckRadius = 0.2f;
+    public float groundCheckRadius = 0.5f;
     public LayerMask groundLayer;
 
     private Rigidbody2D rb;
@@ -52,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
        rb.gravityScale = normalGravity; 
        
        
-        
+      
     }
     
     void Update()
