@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 36987acb6753c4b23b21e51e38eca471
+guid: 3a0dd73dd775041e2a37917827b704c2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4860417463286439256
-    second: tree1 1_0
+      213: 7449325294712130276
+    second: Rock-med1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tree1 1_0
+      name: Rock-med1_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 10
-        width: 363
-        height: 769
+        x: 0
+        y: 0
+        width: 68
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8a2e4b891145c8cb0800000000000000
-      internalID: -4860417463286439256
+      spriteID: 4ea06a723e1516760800000000000000
+      internalID: 7449325294712130276
       vertices: []
       indices: 
       edges: []
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      tree1 1_0: -4860417463286439256
+      Rock-med1_0: 7449325294712130276
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

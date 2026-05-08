@@ -1,22 +1,10 @@
 fileFormatVersion: 2
-guid: c38e95cddcc8c42d68c8631de96dda78
+guid: f12489533333d4828a4380a887504ef1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2541579827414792756
-    second: tree1_0
-  - first:
-      213: 7209657227957792324
-    second: tree1_1
-  - first:
-      213: 1119105973310806021
-    second: tree1_2
-  - first:
-      213: 3794882191217770560
-    second: tree1_3
-  - first:
-      213: 6676945674137800452
-    second: tree1_4
+      213: -1569563696091255713
+    second: Rock-med2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -108,105 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tree1_0
+      name: Rock-med2_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 196
-        width: 351
-        height: 747
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cc584a2ec9e7abcd0800000000000000
-      internalID: -2541579827414792756
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tree1_1
-      rect:
-        serializedVersion: 2
-        x: 976
-        y: 631
-        width: 14
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 44e60c8ec09dd0460800000000000000
-      internalID: 7209657227957792324
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tree1_2
-      rect:
-        serializedVersion: 2
-        x: 1063
-        y: 220
-        width: 351
-        height: 743
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 508553514fcd78f00800000000000000
-      internalID: 1119105973310806021
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tree1_3
-      rect:
-        serializedVersion: 2
-        x: 1822
-        y: 162
-        width: 363
-        height: 769
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 040cdfb2f312aa430800000000000000
-      internalID: 3794882191217770560
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tree1_4
-      rect:
-        serializedVersion: 2
-        x: 2823
         y: 0
-        width: 361
-        height: 767
+        width: 63
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 40f8093f6b649ac50800000000000000
-      internalID: 6676945674137800452
+      spriteID: f5ca122622ac73ae0800000000000000
+      internalID: -1569563696091255713
       vertices: []
       indices: 
       edges: []
@@ -235,11 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      tree1_0: -2541579827414792756
-      tree1_1: 7209657227957792324
-      tree1_2: 1119105973310806021
-      tree1_3: 3794882191217770560
-      tree1_4: 6676945674137800452
+      Rock-med2_0: -1569563696091255713
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
