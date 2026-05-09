@@ -1,12 +1,16 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PortalTeleport : MonoBehaviour
 {
     public Transform teleportDestination;
     public Image fadeImage;
     public float fadeDuration = 0.25f;
+    
+    [Header("Level Completion")]
+    public bool isFinalPortal = false;
 
     private bool isTeleporting;
 
@@ -34,6 +38,14 @@ public class PortalTeleport : MonoBehaviour
 
         // Teleport player
         player.position = teleportDestination.position;
+        
+        if (isFinalPortal)
+        {
+            PlayerPrefs.SetInt("Level2Completed", 1);
+            PlayerPrefs.Save();
+
+            SceneManager.LoadScene("MainMenu");
+        }
 
         // Fade IN
         t = 0;

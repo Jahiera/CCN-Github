@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3644391270604875886}
   - component: {fileID: 2885844417019951131}
   - component: {fileID: -78251418062253515}
+  - component: {fileID: -4199572121711671985}
   m_Layer: 0
   m_Name: Cater_Asset
   m_TagString: Untagged
@@ -84,12 +85,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 6605157102752571169, guid: 5152e56105d42a343828542192a29b84, type: 3}
+  m_Sprite: {fileID: 925051192132019417, guid: 57f10c39ea7c6454b9ddd884f401bf97, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 6, y: 1.82}
+  m_Size: {x: 2.985, y: 0.91}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -108,6 +109,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DamagePlayer
   damage: 1
   instantDeath: 0
+  constantDamage: 0
+  damageInterval: 1
 --- !u!61 &2885844417019951131
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -146,8 +149,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3, y: 0.91}
-    newSize: {x: 6, y: 1.82}
+    oldSize: {x: 2.985, y: 0.91}
+    newSize: {x: 2.985, y: 0.91}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -171,3 +174,25 @@ MonoBehaviour:
   - {fileID: 0}
   targetPoint: 0
   speed: 4
+--- !u!95 &-4199572121711671985
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838006493865531801}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9a282cf40c930481ba90aa7ce5e1539b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
