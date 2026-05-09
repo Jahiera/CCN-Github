@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b57ca00e1ebf64a47ba3290c30faf2ef
+guid: 87ad4efeea19646349916af72ebb8c98
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2466456896491612391
-    second: SmallWaterTile_0
+      213: 5272117364155676143
+    second: replay_lvl1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SmallWaterTile_0
+      name: replay_lvl1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 300
-        height: 488
+        x: 803
+        y: 412
+        width: 209
+        height: 191
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7e8e131ca7d9a3220800000000000000
-      internalID: 2466456896491612391
+      spriteID: fe5faa05fc25a2940800000000000000
+      internalID: 5272117364155676143
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SmallWaterTile_0: 2466456896491612391
+      replay_lvl1_0: 5272117364155676143
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

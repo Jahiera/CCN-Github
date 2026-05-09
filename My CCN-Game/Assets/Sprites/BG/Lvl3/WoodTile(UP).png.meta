@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b57ca00e1ebf64a47ba3290c30faf2ef
+guid: 7c2db8d795a7b4f3c99b5a92112817a1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2466456896491612391
-    second: SmallWaterTile_0
+      213: -8407514000755353541
+    second: WoodTile(UP)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SmallWaterTile_0
+      name: WoodTile(UP)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 300
-        height: 488
+        width: 500
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7e8e131ca7d9a3220800000000000000
-      internalID: 2466456896491612391
+      spriteID: b389adcaf82825b80800000000000000
+      internalID: -8407514000755353541
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SmallWaterTile_0: 2466456896491612391
+      WoodTile(UP)_0: -8407514000755353541
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
