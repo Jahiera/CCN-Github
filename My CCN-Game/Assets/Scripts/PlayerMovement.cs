@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
     
     //LVL3 Climbing Setup
     [SerializeField] private float climbSpeed = 4f;
+    private bool climbingEnabled = false;
 
     private bool isOnLadder = false;
     private bool isClimbing = false;
@@ -51,7 +52,11 @@ public class PlayerMovement : MonoBehaviour
        //Default Gravity 
        rb.gravityScale = normalGravity; 
        
-       
+       //check if the scene is level 3 to allow climbing 
+       if (SceneManager.GetActiveScene().name == "Level3")
+       {
+           climbingEnabled = true;
+       }
       
     }
     
@@ -107,7 +112,7 @@ public class PlayerMovement : MonoBehaviour
         
         //LVL3 Climbing Logic
 
-        if (isOnLadder && Mathf.Abs(verticalInput) > 0)
+        if (climbingEnabled && isOnLadder && Mathf.Abs(verticalInput) > 0)
         {
             isClimbing = true;
         }
@@ -115,6 +120,12 @@ public class PlayerMovement : MonoBehaviour
         {
             isClimbing = false;
         }
+        
+        if (climbingEnabled)
+        {
+            animator.SetBool("IsClimbing", isClimbing);
+        }
+        
 
     }
 
@@ -124,7 +135,7 @@ public class PlayerMovement : MonoBehaviour
              isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
              
         //LVL3 Climbing
-        if (isClimbing)
+        if (climbingEnabled && isClimbing)
         {
             rb.gravityScale = 0f;
             rb.linearVelocity = new Vector2(0f, verticalInput * climbSpeed);
@@ -132,7 +143,6 @@ public class PlayerMovement : MonoBehaviour
         }
         
         
-
         // Horizontal movement
         rb.linearVelocity = new Vector2(horizontalInput * moveSpeed, rb.linearVelocity.y);
 
@@ -142,6 +152,12 @@ public class PlayerMovement : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce * jumpBoost);
             jumpPressed = false;
         }
+        
+        else if (jumpPressed && isGrounded && !canJump)
+        {
+            jumpPressed = false;
+        }
+        
         
         //Adjust gravity dynamically 
         if (rb.linearVelocity.y < 0)
