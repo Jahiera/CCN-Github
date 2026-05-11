@@ -8,6 +8,7 @@ public class HidingSpots : MonoBehaviour
     private Rigidbody2D rb;
 
     private bool canHide = false;
+    private HidingSpotVisual currentHidingSpot;
 
     void Start()
     {
@@ -35,11 +36,21 @@ public class HidingSpots : MonoBehaviour
             rb.linearVelocity = Vector2.zero;
             rb.constraints = RigidbodyConstraints2D.FreezeAll;
             spriteRenderer.enabled = false;
+            
+            if (currentHidingSpot != null)
+            {
+                currentHidingSpot.SetHiddenSprite();
+            }
         }
         else
         {
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
             spriteRenderer.enabled = true;
+            
+            if (currentHidingSpot != null)
+            {
+                currentHidingSpot.SetNormalSprite();
+            }
         }
     }
 
@@ -48,6 +59,7 @@ public class HidingSpots : MonoBehaviour
         if (collision.CompareTag("HidingSpot"))
         {
             canHide = true;
+            currentHidingSpot = collision.GetComponent<HidingSpotVisual>();
         }
     }
 
@@ -56,7 +68,7 @@ public class HidingSpots : MonoBehaviour
         if (collision.CompareTag("HidingSpot"))
         {
             canHide = false;
-
+            currentHidingSpot = null;
             // IMPORTANT: don't force unhide here anymore
             // this fixes the snap-out bug
         }

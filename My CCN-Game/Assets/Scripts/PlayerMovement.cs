@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isGrounded;
     private bool jumpPressed; 
     private bool canJump = true; // to disable jump in level 2
+    private bool reverseFlip = false; // only for level 2 since animation frames were given flipped
     
     //Hiding (do not remove bc other systems rely on it)
     public bool isHiding {get; private set;}
@@ -47,6 +48,7 @@ public class PlayerMovement : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "Level2")
         {
             canJump = false;
+            reverseFlip = true;
         }
         
        //Default Gravity 
@@ -63,11 +65,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
 
-       
-
         if (isHiding) return;
-        
-        
         if (Keyboard.current == null) return;
 
         // Horizontal Input
@@ -103,8 +101,15 @@ public class PlayerMovement : MonoBehaviour
         // ======================
         if (horizontalInput != 0)
         {
+            float direction = Mathf.Sign(horizontalInput);
+
+            if (reverseFlip)
+            {
+                direction *= -1;
+            }
+
             transform.localScale = new Vector3(
-                Mathf.Sign(horizontalInput),
+                direction,
                 1,
                 1
             );

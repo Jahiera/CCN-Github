@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 382360849103046789}
   - component: {fileID: 1247471390877082904}
   - component: {fileID: 1389566059907124162}
+  - component: {fileID: 8534775413403917929}
   m_Layer: 0
   m_Name: Bush
   m_TagString: HidingSpot
@@ -82,12 +83,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -8395721096167815554, guid: 527ec0a675dcb4217b639c335ffd45b7, type: 3}
+  m_Sprite: {fileID: -7876781513592612874, guid: 6056c597b9a604cdfa83830396667266, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.63, y: 4.24}
+  m_Size: {x: 5.67, y: 5.23}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -130,11 +131,25 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 23.779999, y: 16.11}
-    newSize: {x: 1.63, y: 4.24}
+    oldSize: {x: 5.67, y: 5.23}
+    newSize: {x: 5.67, y: 5.23}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Size: {x: 1.63, y: 4.24}
   m_EdgeRadius: 0
+--- !u!114 &8534775413403917929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8673505139183018302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9199a80277f3d427ea8a92e5f4165fc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HidingSpotVisual
+  normalSprite: {fileID: -7876781513592612874, guid: 6056c597b9a604cdfa83830396667266, type: 3}
+  hiddenSprite: {fileID: 2476417197399195537, guid: 2d2d831fce3ea426190b773655398e37, type: 3}

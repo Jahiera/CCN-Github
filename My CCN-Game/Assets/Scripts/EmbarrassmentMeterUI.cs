@@ -12,6 +12,11 @@ public class EmbarrassmentMeterUI : MonoBehaviour
     public Slider slider;
     public Transform playerTransform;
     public PlayerMovement playerScript;
+    
+    [Header("Embarrassment Sound")]
+    public AudioClip embarrassmentSound;
+    private AudioSource audioSource;
+    private bool wasEmbarrassed = false;
 
 
 	public Image vignetteImage;
@@ -21,15 +26,15 @@ public class EmbarrassmentMeterUI : MonoBehaviour
         slider.minValue = 0f;
         slider.maxValue = maxEmbarrassment;
         slider.value = currentEmbarrassment;
+        audioSource = GetComponent<AudioSource>();
 
-//start the vinette image at 0% opacity 
-if (vignetteImage != null)
-{
-    Color c = vignetteImage.color;
-    c.a = 0f;
-    vignetteImage.color = c;
-}
-
+        //start the vinette image at 0% opacity 
+        if (vignetteImage != null)
+        {
+           Color c = vignetteImage.color;
+           c.a = 0f;
+            vignetteImage.color = c;
+        }
 
     }
 
@@ -56,6 +61,14 @@ if (vignetteImage != null)
                 break;
             }
         }
+        
+        if (embarrassingSituation && !wasEmbarrassed)
+        {
+            if (audioSource != null && embarrassmentSound != null)
+            {
+                audioSource.PlayOneShot(embarrassmentSound);
+            }
+        }
 
         if (embarrassingSituation)
             currentEmbarrassment += embarrassmentRate * Time.deltaTime;
@@ -70,14 +83,16 @@ if (vignetteImage != null)
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
-// Update vignette opacity based on embarrassment meter levels
-if (vignetteImage != null)
-{
-    float normalizedEmbarrassment = currentEmbarrassment / maxEmbarrassment;
-    Color c = vignetteImage.color;
-    c.a = normalizedEmbarrassment;
-    vignetteImage.color = c;
-}
+        // Update vignette opacity based on embarrassment meter levels
+        if (vignetteImage != null)
+        {
+            float normalizedEmbarrassment = currentEmbarrassment / maxEmbarrassment;
+            Color c = vignetteImage.color;
+            c.a = normalizedEmbarrassment;
+            vignetteImage.color = c;
+        }
+
+        wasEmbarrassed = embarrassingSituation;
 
     }
 }

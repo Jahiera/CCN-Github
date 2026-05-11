@@ -11,8 +11,15 @@ public class PortalTeleport : MonoBehaviour
     
     [Header("Level Completion")]
     public bool isFinalPortal = false;
+    
+    [Header("Level 2 Animation Change")]
+    public string animatorTriggerName;
 
     private bool isTeleporting;
+    
+    [Header("Level 2 Music Switch")]
+    public AudioSource musicToStop;
+    public AudioSource musicToStart;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -39,6 +46,27 @@ public class PortalTeleport : MonoBehaviour
         // Teleport player
         player.position = teleportDestination.position;
         
+        //music change from school to park 
+        if (musicToStop != null)
+        {
+            musicToStop.Stop();
+        }
+
+        if (musicToStart != null && !musicToStart.isPlaying)
+        {
+            musicToStart.loop = true;
+            musicToStart.Play();
+        }
+        
+        // animation change
+        Animator playerAnimator = player.GetComponent<Animator>();
+
+        if (playerAnimator != null && !string.IsNullOrEmpty(animatorTriggerName))
+        {
+            playerAnimator.SetTrigger(animatorTriggerName);
+        }
+        
+        //check final portal to end level
         if (isFinalPortal)
         {
             PlayerPrefs.SetInt("Level2Completed", 1);
