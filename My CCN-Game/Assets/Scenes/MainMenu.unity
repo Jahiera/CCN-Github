@@ -244,7 +244,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -29.5, y: 51.3}
+  m_AnchoredPosition: {x: -24.5, y: 51.3}
   m_SizeDelta: {x: 73.78024, y: 48.03947}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &125161877
@@ -411,10 +411,10 @@ MonoBehaviour:
     by rather than direct threats.\n\nIf you are spotted, Jonathan\u2019s embarrassment
     will start to rise. Your task is to move through the area without drawing attention
     and find a safe place to hide. The goal here is to help him escape situations
-    where he feels exposed and overwhelmed."
+    where he feels exposed and overwhelmed.\n\nLet's go!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 14332c434199d405389a686126a1f137, type: 2}
-  m_sharedMaterial: {fileID: -8389354278039786611, guid: 14332c434199d405389a686126a1f137, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 645583d79d4054d7f829d0ec69097a50, type: 2}
+  m_sharedMaterial: {fileID: -4492571421859781031, guid: 645583d79d4054d7f829d0ec69097a50, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -438,20 +438,20 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 8
-  m_fontSizeBase: 8
+  m_fontSize: 12
+  m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 4
+  m_characterSpacing: 18.1
   m_characterHorizontalScale: 0.6
-  m_wordSpacing: 8
-  m_lineSpacing: 30
+  m_wordSpacing: -1.24
+  m_lineSpacing: 22.8
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -671,7 +671,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.26666668}
   m_AnchorMax: {x: 0.9416667, y: 0.80833334}
-  m_AnchoredPosition: {x: -27.993221, y: -4.499999}
+  m_AnchoredPosition: {x: -27.993221, y: -5.3}
   m_SizeDelta: {x: 162.39041, y: 198.81606}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &292774010
@@ -694,18 +694,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Hey newbie,\n\nYour first client is a kid named Jonathan. He is struggling
-    with a big fear of being alone, and it shows up in his dreams as a dark forest
-    with no clear path. Everything feels quiet and empty, which makes even small
-    things feel scary. Your goal is to help him move through this space and learn
-    that being alone does not always mean being unsafe.\n\nYou will find a campfire
-    in the forest. This is his safe spot. Collect firewood to keep it burning while
-    exploring and avoiding anything that feels threatening. The stronger the fire,
-    the braver Jonathan becomes. \n\nTake your time, stay alert, and help him build
-    the courage to keep going. \n\nGood luck! "
+  m_text: "Hey newbie,\n\nYour first client is a kid named Jonathan. He struggles
+    with the fear of being alone, and it shows up in his dreams as a dark forest.
+    \nYour goal is to help him move through this space and learn that being alone
+    does not always mean being unsafe.\n\nYou will find a campfire in the forest.
+    This is his safe spot. Collect firewood to keep it burning while exploring and
+    avoiding anything that feels threatening. The stronger the fire, the braver Jonathan
+    becomes. \n\nTake your time, stay alert, and help him build the courage to keep
+    going. \n\nGood luck! "
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 14332c434199d405389a686126a1f137, type: 2}
-  m_sharedMaterial: {fileID: -8389354278039786611, guid: 14332c434199d405389a686126a1f137, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 645583d79d4054d7f829d0ec69097a50, type: 2}
+  m_sharedMaterial: {fileID: -4492571421859781031, guid: 645583d79d4054d7f829d0ec69097a50, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -729,20 +728,20 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 8
-  m_fontSizeBase: 8
+  m_fontSize: 12
+  m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 4
+  m_characterSpacing: 18.1
   m_characterHorizontalScale: 0.6
-  m_wordSpacing: 8
-  m_lineSpacing: 30
+  m_wordSpacing: -1.24
+  m_lineSpacing: 22.8
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -927,7 +926,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -5159338872912762175, guid: 625762b330562483e942986b770b32bb, type: 3}
+  m_Sprite: {fileID: -950405409375895835, guid: a4fdeefa99b274ac1893fd8a16f29863, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1304,8 +1303,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Ticket 1
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a912889f56eb34318badb34211602af9, type: 2}
+  m_sharedMaterial: {fileID: 5204819733759827202, guid: a912889f56eb34318badb34211602af9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1329,8 +1328,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 250
-  m_fontSizeBase: 250
+  m_fontSize: 150
+  m_fontSizeBase: 150
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1402,7 +1401,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 5204819733759827202, guid: a912889f56eb34318badb34211602af9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1423,7 +1422,7 @@ MeshRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 5
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &824895984
@@ -1535,7 +1534,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -29.5, y: 51.3}
+  m_AnchoredPosition: {x: -24.5, y: 51.3}
   m_SizeDelta: {x: 73.78024, y: 48.03947}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &825611870
@@ -1560,8 +1559,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Mr. Bossman
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 14332c434199d405389a686126a1f137, type: 2}
-  m_sharedMaterial: {fileID: -8389354278039786611, guid: 14332c434199d405389a686126a1f137, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a912889f56eb34318badb34211602af9, type: 2}
+  m_sharedMaterial: {fileID: 5204819733759827202, guid: a912889f56eb34318badb34211602af9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1673,7 +1672,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.9633, y: -40.104}
+  m_AnchoredPosition: {x: 4.9633, y: -46.10035}
   m_SizeDelta: {x: 142.7068, y: 210.6764}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &828777341
@@ -1859,7 +1858,6 @@ RectTransform:
   m_Children:
   - {fileID: 983824181}
   - {fileID: 828777340}
-  - {fileID: 2140038212}
   - {fileID: 292774009}
   - {fileID: 1693312128}
   - {fileID: 1880610344}
@@ -2302,7 +2300,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -5159338872912762175, guid: 625762b330562483e942986b770b32bb, type: 3}
+  m_Sprite: {fileID: -950405409375895835, guid: a4fdeefa99b274ac1893fd8a16f29863, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2540,8 +2538,8 @@ MonoBehaviour:
     control and being overwhelmed by responsibility, so staying focused and pushing
     forward is key.\n\nYou can do this!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 14332c434199d405389a686126a1f137, type: 2}
-  m_sharedMaterial: {fileID: -8389354278039786611, guid: 14332c434199d405389a686126a1f137, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 645583d79d4054d7f829d0ec69097a50, type: 2}
+  m_sharedMaterial: {fileID: -4492571421859781031, guid: 645583d79d4054d7f829d0ec69097a50, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2565,20 +2563,20 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 8
-  m_fontSizeBase: 8
+  m_fontSize: 12
+  m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 4
+  m_characterSpacing: 18.1
   m_characterHorizontalScale: 0.6
-  m_wordSpacing: 8
-  m_lineSpacing: 30
+  m_wordSpacing: -1.24
+  m_lineSpacing: 22.8
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -2819,7 +2817,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -5159338872912762175, guid: 625762b330562483e942986b770b32bb, type: 3}
+  m_Sprite: {fileID: -950405409375895835, guid: a4fdeefa99b274ac1893fd8a16f29863, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3405,7 +3403,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -29.5, y: 51.3}
+  m_AnchoredPosition: {x: -24.5, y: 51.3}
   m_SizeDelta: {x: 73.78024, y: 48.03947}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1693312129
@@ -3430,8 +3428,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Mr. Bossman
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 14332c434199d405389a686126a1f137, type: 2}
-  m_sharedMaterial: {fileID: -8389354278039786611, guid: 14332c434199d405389a686126a1f137, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a912889f56eb34318badb34211602af9, type: 2}
+  m_sharedMaterial: {fileID: 5204819733759827202, guid: a912889f56eb34318badb34211602af9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3876,7 +3874,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.007616846, y: -40.10365}
+  m_AnchoredPosition: {x: 0.007616846, y: -46.1}
   m_SizeDelta: {x: 0.7388, y: 0.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1880610345
@@ -4421,81 +4419,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!1 &2140038211
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2140038212}
-  - component: {fileID: 2140038214}
-  - component: {fileID: 2140038213}
-  m_Layer: 0
-  m_Name: BossPFP
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2140038212
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2140038211}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 8.070914, y: 9.948936, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 842761492}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -51.9, y: 51.3}
-  m_SizeDelta: {x: 1, y: 1}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2140038213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2140038211}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 4915620324684567951, guid: 3f2b02c318f294592b721e063654a2e3, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &2140038214
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2140038211}
-  m_CullTransparentMesh: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 75a37c73dcf2547098a5bf65b0b01c6a
+guid: 3003d708cbc264787937bcb2dc5217b7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5582231563216670518
-    second: street_back_0
+      213: -1394269405226714864
+    second: street_back2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: street_back_0
+      name: street_back2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ac03f7c18fde782b0800000000000000
-      internalID: -5582231563216670518
+      spriteID: 0193444fc5f86ace0800000000000000
+      internalID: -1394269405226714864
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      street_back_0: -5582231563216670518
+      street_back2_0: -1394269405226714864
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

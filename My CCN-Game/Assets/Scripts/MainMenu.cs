@@ -29,12 +29,17 @@ public class MainMenu : MonoBehaviour
 
     void Start()
     {
+        
         // Hide all notes when the menu scene starts
         for (int i = 0; i < notes.Length; i++)
         {
             notes[i].SetActive(false);
         }
 
+        // LOCK them first 
+        ticket2Button.interactable = false;
+        ticket3Button.interactable = false;
+        
         // Ticket unlock checks
         bool level1Completed = PlayerPrefs.GetInt("Level1Completed", 0) == 1;
         bool level2Completed = PlayerPrefs.GetInt("Level2Completed", 0) == 1;
