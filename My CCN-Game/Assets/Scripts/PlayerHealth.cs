@@ -12,21 +12,43 @@ public class PlayerHealth : MonoBehaviour
     public int maxHealth = 5;
     public int currentHealth;
     
-    //ouch sound setup
+    //ouch & drown sound setup
     public AudioClip ouchSound;     
+    public AudioClip drowningSound;
+    private bool useDrowningSound = false;
     private AudioSource audioSource;  
     
     //player blinks when damage taken 
     public SpriteRenderer playerSprite;   // drag your player sprite here
     public float blinkDuration = 1f;      // total blinking time
     public float blinkInterval = 0.1f;    // time between on/off blinks
+    
+    [Header("Level 3 Drowning Sprite")]
+    public Sprite drowningSprite;
+
+    private Sprite normalSprite;
+    private bool useDrowningSprite = false;
+    private Animator animator;
 
     private void Start()
     {
         currentHealth = maxHealth;
+        
+        if (playerSprite != null)
+        {
+            normalSprite = playerSprite.sprite;
+        }
+
+        if (SceneManager.GetActiveScene().name == "Level3")
+        {
+            useDrowningSprite = true;
+            useDrowningSound = true;
+        }
+        
         UpdateHealthUI();
         
         audioSource = GetComponent<AudioSource>();
+        animator = GetComponent<Animator>();
         if (audioSource == null)
         {
             audioSource = gameObject.AddComponent<AudioSource>();
@@ -44,10 +66,18 @@ public class PlayerHealth : MonoBehaviour
 
         UpdateHealthUI();
         
-        // Play ouch sound
-        if (audioSource != null && ouchSound != null)
+        if (audioSource != null)
         {
-            audioSource.PlayOneShot(ouchSound);
+            //play drown sound
+            if (useDrowningSound && drowningSound != null)
+            {
+                audioSource.PlayOneShot(drowningSound);
+            }
+            //play ouch sound
+            else if (ouchSound != null)
+            {
+                audioSource.PlayOneShot(ouchSound);
+            }
         }
         
         //blinking 
@@ -97,18 +127,41 @@ public class PlayerHealth : MonoBehaviour
     private IEnumerator BlinkSprite()
     {
         float elapsed = 0f;
+        
+        if (useDrowningSprite && animator != null)
+        {
+            animator.enabled = false;
+        }
 
         while (elapsed < blinkDuration)
         {
             if (playerSprite != null)
                 playerSprite.enabled = !playerSprite.enabled; // toggle sprite visibility
+            
+            //show drowning sprite
+            if (useDrowningSprite && playerSprite.enabled)
+            {
+                playerSprite.sprite = drowningSprite;
+            }
+            else if (playerSprite.enabled)
+            {
+                playerSprite.sprite = normalSprite;
+            }
 
             elapsed += blinkInterval;
             yield return new WaitForSeconds(blinkInterval);
         }
 
         if (playerSprite != null)
-            playerSprite.enabled = true; // make sure sprite is visible at the end
+        {
+            playerSprite.enabled = true;
+            playerSprite.sprite = normalSprite;
+        }
+
+        if (useDrowningSprite && animator != null)
+        {
+            animator.enabled = true;
+        }
     }
 
 }

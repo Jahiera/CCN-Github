@@ -59,7 +59,12 @@ public class HidingSpots : MonoBehaviour
         if (collision.CompareTag("HidingSpot"))
         {
             canHide = true;
-            currentHidingSpot = collision.GetComponent<HidingSpotVisual>();
+            HidingSpotVisual spot = collision.GetComponent<HidingSpotVisual>();
+
+            if (spot != null)
+            {
+                currentHidingSpot = spot;
+            }
         }
     }
 
@@ -67,8 +72,14 @@ public class HidingSpots : MonoBehaviour
     {
         if (collision.CompareTag("HidingSpot"))
         {
-            canHide = false;
-            currentHidingSpot = null;
+            HidingSpotVisual exitedSpot = collision.GetComponent<HidingSpotVisual>();
+
+            if (exitedSpot == currentHidingSpot)
+            {
+                canHide = false;
+                currentHidingSpot = null;
+            }
+
             // IMPORTANT: don't force unhide here anymore
             // this fixes the snap-out bug
         }

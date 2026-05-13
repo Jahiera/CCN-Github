@@ -48,7 +48,13 @@ public class PlayerMovement : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "Level2")
         {
             canJump = false;
-            reverseFlip = true;
+            reverseFlip = true; // since I got the sprites the opposte way
+        }
+        
+        
+        if (SceneManager.GetActiveScene().name == "Level3")
+        {
+            reverseFlip = true; // flipping level 3 as I also got the sprites the opposite way
         }
         
        //Default Gravity 
