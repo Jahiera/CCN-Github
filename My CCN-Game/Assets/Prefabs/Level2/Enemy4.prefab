@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1144556681072765254}
   - component: {fileID: -7169566391676866034}
   m_Layer: 0
-  m_Name: Enemy3
+  m_Name: Enemy4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82,12 +82,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 9
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 4364285575391702742, guid: 0b5c088118f77475fbde386fe397297e, type: 3}
+  m_Sprite: {fileID: 7652132544450971517, guid: 4793823c20fbb44ef81b6375eca6655f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.18, y: 3.78}
+  m_Size: {x: 2.41, y: 6.6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -106,6 +106,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyVision
   embarrassmentRadius: 11
   enemySprite: {fileID: 1144556681072765254}
-  safeSprite: {fileID: -7935837526938644956, guid: 60b63868e55334125b4c96704926da4a, type: 3}
-  warningSprite: {fileID: -7935837526938644956, guid: 60b63868e55334125b4c96704926da4a, type: 3}
-  dangerSprite: {fileID: 4364285575391702742, guid: 0b5c088118f77475fbde386fe397297e, type: 3}
+  safeSprite: {fileID: 4431427055480570296, guid: ae9b70f81abc544ac978156a6350dfc8, type: 3}
+  warningSprite: {fileID: 4431427055480570296, guid: ae9b70f81abc544ac978156a6350dfc8, type: 3}
+  dangerSprite: {fileID: 7652132544450971517, guid: 4793823c20fbb44ef81b6375eca6655f, type: 3}
